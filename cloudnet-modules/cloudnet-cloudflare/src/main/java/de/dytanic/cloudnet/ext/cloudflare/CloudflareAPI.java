@@ -190,7 +190,7 @@ public final class CloudflareAPI implements AutoCloseable {
         httpURLConnection.setUseCaches(false);
         //
         httpURLConnection.setRequestProperty("X-Auth-Email", email);
-        httpURLConnection.setRequestProperty("X-Auth-Key", apiKey);
+        httpURLConnection.setRequestProperty("Authorization", "Bearer " + apiKey);
         //
         httpURLConnection.setRequestProperty("Accept", "application/json");
         httpURLConnection.setRequestProperty("Content-Type", "application/json");
